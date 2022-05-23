@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh '''
                 dotnet build api/system/system.csproj -c Release -r \
-                linux-x64 --self-contained -p:Version="$APP_VER"
+                linux-x64 -p:Version="$APP_VER"
                 dotnet publish api/system/system.csproj -c Release -r \
                 linux-x64 -o ../out --self-contained -p:Version="$APP_VER"
                 '''
@@ -36,7 +36,7 @@ pipeline {
                 // dotnetPublish(project:'api/system/system.csproj',
                 //     configuration:'Release', runtime:'linux-x64', selfContained:true,
                 //     outputDirectory: '../out', propertiesString: "Version=$APP_VER")
-                sh "zip -r system${APP_VER}.zip out"
+                sh "zip -r system${APP_VER}.zip . -i out"
                 echo 'build, run tests'
                 s3Upload(file:"system${APP_VER}.zip",
                 bucket: "soinshane-terraform-state")
@@ -46,8 +46,8 @@ pipeline {
                 steps {
                     sh 'which aws'
                     echo 'create the zip, and push to beanstalk'
-                    echo "s3_file=s3://bucket/app_version/v${env.BUILD_NUMBER}.zip"
-                    build job: 'create-release', parameters: [string(name: 'Label', value: "v${env.BUILD_NUMBER}")]
+                    echo "s3_file=s3://bucket/app_version/${env.BUILD_NUMBER}.zip"
+                    build job: 'create-release', parameters: [string(name: 'Label', value: "${env.BUILD_NUMBER}")]
                 }
         }
 
