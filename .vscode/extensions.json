@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "recode4dev.jenkinsfile",
+        "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig",
+        "tabeyti.jenkins-jack",
+        "vscjava.vscode-java-debug",
+        "jmmeessen.jenkins-declarative-support",
+        "vscjava.vscode-java-pack",
+        "maarti.jenkins-doc",
+        "janjoerke.jenkins-pipeline-linter-connector",
+        "plex.vscode-protolint",
+        "NicolasVuillamy.vscode-groovy-lint"
+    ]
+}

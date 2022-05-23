@@ -1,0 +1,23 @@
+{
+    // "jenkins-jack.jenkins.connections":[{
+    //     "uri": "https://jenkins.soinshane.com",
+    //     "username": "admin",
+    //     "name": "soinshane",
+    //     "active": false
+    // }],
+    // "jenkins-jack.jenkins.strictTls": true,
+    // "jenkins-jack.pipeline.browserBuildOutput": true,
+    // "jenkins-jack.pipeline.params.interactiveInput": true,
+    "jenkins-jack.snippets.enabled": true,
+    // "jenkins-jack.tree.directorySeparator": "/",
+    //"jenkins-jack.job.tree.numBuilds": 100,
+    "jenkins.pipeline.linter.connector.url": "http://localhost:8080/pipeline-model-converter/validate",
+    "jenkins.pipeline.linter.connector.user": "admin",
+    "jenkins.pipeline.linter.connector.strictssl": false, 
+    "jenkins.pipeline.linter.connector.token": "1142c3e277925c388f3febc8f9b2a8c0cd",
+    "jenkins.pipeline.linter.connector.crumbUrl": "http://localhost:8080/crumbIssuer/api?xml1142c3e277925c388f3febc8f9b2a8c0cd"
+
+    
+
+
+}
