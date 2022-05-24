@@ -17,3 +17,7 @@ With all those installed. You should be able to run
 npm-groovy-lint
 ```
 Which should output issues. You can `npm-groovy-lint --fix` if you want an auto fix
+
+https://plugins.jenkins.io/delivery-pipeline-plugin
+6.0.0.${BUILD_NUMBER}
+
