@@ -45,6 +45,7 @@ pipeline {
                 echo 'push the file to s3, kick off the beanstalk create app version'
                 echo 'Then we should have a prepared deploy for all environments'
                 echo "archiveArtifacts ${env.BUILD_NUMBER}"
+                
             }
         }
         stage('Notifiy Release') {
