@@ -3,22 +3,22 @@ provider "aws" {
 
   default_tags {
     tags = {
-      "soin:app" : "jenkins"
-      "soin:env" : "ops"
+      "ds:app" : "jenkins"
+      "ds:env" : "ops"
     }
   }
 }
 
 locals {
-  acm_cert_arn    = "arn:aws:acm:us-east-1:503517101544:certificate/ce6caf5e-12a3-451e-9495-920183da3534"
-  domain_name     = "soinshane.com"
+  #hosted_zone     = "Z0978659ZF19AZNAKB5U"
+  #acm_cert_arn    = "arn:aws:acm:us-east-1:${data.aws_caller_identity.current.account_id}:certificate/2d347d0b-dab1-4139-aa9c-31730e6e6d99 "
+  domain_name     = "datassential.com"
   vpc_id          = "vpc-0c912ef621e20711f"
-  hosted_zone     = "Z066392621TRXU9GT4LYS"
-  subnet_tag_name = "tag:soin:subnet"
+  subnet_tag_name = "tag:ds:subnet"
   subdomain_name  = "jenkins"
   tags = {
-    "soin:app" : "jenkins"
-    "soin:env" : "ops"
+    "ds:app" : "jenkins"
+    "ds:env" : "ops"
   }
 }
 # data "aws_route53_zone" "selected" {

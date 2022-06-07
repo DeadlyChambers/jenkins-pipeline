@@ -31,6 +31,7 @@ pipeline {
             }
             steps{
                 echo "Do Build for ${params.ENV} - ${BROWSER}"
+                build job: 'POC-release-pipeline', wait: false
             }
         }
         stage('Deploy Stage') {
